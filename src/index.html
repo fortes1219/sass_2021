@@ -4,24 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <title>SASS 2021</title>
+  <title>捕魚大廳範例</title>
 </head>
 
 <body>
 <div class="app">
-  <nav class="navigator">
-    <div class="nav-left"></div>
-    <h1>Navigator</h1>
-    <div class="nav-right"></div>
-  </nav>
-  <div class="container">
-    <img src="./img/pc/game01.png">
-    <img src="./img/pc/game02.png">
-    <img src="./img/pc/game03.png">
+  <div class="navigator">
+    <div class="row horizontal v_center">
+      <div class="player">
+        <img src="img/pc/avatar.jpg" class="avatar">
+        <div class="player_exp_block">
+          <span class="player_name">Astolfo</span>
+          <div class="player_exp">
+            <div class="exp_slot">
+              <p>Lv99</p>
+              <span class="exp_bar" data-width="80%"></span>
+            </div>
+          </div>
+        </div>
+        <div class="star_remain">
+          <p>x 168</p>
+        </div>
+      </div>
+      <div class="remain_coins">16000</div>
+    </div>
+    <ul class="top_menu">
+      <li data-top-menu="payment"></li>
+      <li class="has_count" data-top-menu="reward">
+        <span>99+</span>
+      </li>
+      <li class="has_new" data-top-menu="equipment"></li>
+      <li class="has_count" data-top-menu="items">
+        <span>2</span>
+      </li>
+      <li class="has_new" data-top-menu="mail"></li>
+    </ul>
   </div>
-  <div class="tabs"></div>
+  <div class="container">
+    <div class="aside"></div>
+    <div class="main">
+      <div class="games">
+        <div class="game_01"></div>
+        <div class="game_02"></div>
+        <div class="game_03"></div>
+      </div>
+      <div class="footer">
+        <ul class="bottom_menu">
+          <li class="community"></li>
+          <li class="quest"></li>
+          <li class="rank"></li>
+          <li class="library"></li>
+          <li class="config"></li>
+          <li class="logout"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 

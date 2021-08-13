@@ -1,0 +1,22 @@
+$bottomMenuItems: 'community', 'quest', 'rank', 'library', 'config', 'logout';
+
+.bottom_menu {
+    @include flexBox(row, flex-start, flex-start);
+
+    @for $i from 1 through 6 {
+        li:nth-child(#{$i}) {
+            display: block;
+            transition: all 0.3s linear;
+            width: 100px;
+            height: 36px;
+            background: url('../img/pc/bottom_menu_0#{$i}.png') no-repeat center;
+            background-size: contain;
+            cursor: pointer;
+            &:hover {
+                transition: all 0.3s linear;
+                box-shadow: 0 0 6px #fff;
+            }
+        }
+    }
+    
+}
