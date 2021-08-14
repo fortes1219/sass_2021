@@ -16,20 +16,29 @@ html {
     min-height: 720px;
     background: url('../img/pc/bg.jpg') no-repeat center;
     background-size: cover;
+
+    .navigator {
+        @include flexBox(row, flex-start, space-between);
+        @include boxSizing;
+        width: 100%;
+        padding-right: 2rem;
+        min-height: 80px;
+    }
+
     .container {
         @include flexBox(row, flex-start, flex-start);
         @include boxSizing;
         flex: 1;
         width: 100%;
         height: 100%;
-        border: 1px solid;
 
         .aside {
             @include flexBox(column, flex-start, center);
             @include boxSizing;
-            min-width: 40vh;
+            width: 30%;
             height: 100%;
-            border: 1px solid;
+            min-width: 300px;
+            z-index: 2;
         }
 
         .main {
@@ -37,14 +46,13 @@ html {
             @include boxSizing;
             width: 100%;
             height: 100%;
-            border: 1px solid;
 
             .games {
-                @include flexBox(row, center, flex-start);
+                @include flexBox(row, flex-start, flex-start);
                 @include boxSizing;
                 width: 100%;
                 height: 100%;
-                border: 1px solid;
+                padding: 0 4rem 5rem;
                 @for $i from 1 through 3 {
                     .game_0#{$i} {
                         width: calc(100%/3);
@@ -54,15 +62,14 @@ html {
                     }
                 }
             }
-
-            .footer {
-                @include flexBox(row, flex-end, flex-end);
-                @include boxSizing;
-                width: 100%;
-                border: 1px solid;
-            }
         }
+    }
 
+    .footer {
+        @include flexBox(row, flex-end, flex-end);
+        @include boxSizing;
+        width: 100%;
+        background: linear-gradient(#082733, #07222d);
     }
 }
 

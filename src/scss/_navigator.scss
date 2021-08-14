@@ -33,49 +33,44 @@ $top_menu_component: (
     min-height: 18px;
 }
 
-.navigator {
-    @include flexBox(row, flex-start, space-between);
-    @include boxSizing;
-    width: 100%;
-    min-height: 10vh;
-    border: 1px solid;
-    ul.top_menu {
-        @include flexBox(row, center, flex-start);
-        @each $key, $value in $top_menu_component {
-            $attr: map-get($value, attr);
-            $bg: map-get($value, bg);
-            li {
-                position: relative;
-                min-width: 100px;
-                min-height: 100px;
-                width: 12vh;
-                height: 12vh;
-                
-                &:hover {
-                    transform: scale(1.2);
-                }
-                &::after {
-                    content: "";
-                    @include topMenuAttachment;
-                }
-                &.has_new::after {
-                    background: url("../img/pc/new.svg") no-repeat center;
-                    background-size: contain;
-                }
-                &.has_count span {
-                    @include topMenuAttachment;
-                    @include flexBox(row, center, center);
-                    color: #fff;
-                    font-size: 0.8em;
-                    font-weight: bold;
-                    background: url('../img/pc/count_bg.svg') no-repeat center;
-                    background-size: contain;
-                }
-                cursor: pointer;
-                &[data-top-menu="#{$attr}"] {
-                    background: url("../img/pc/#{$bg}") no-repeat center;
-                    background-size: contain;
-                }
+ul.top_menu {
+    @include flexBox(row, center, flex-start);
+    @each $key, $value in $top_menu_component {
+        $attr: map-get($value, attr);
+        $bg: map-get($value, bg);
+        li {
+            position: relative;
+            min-width: 100px;
+            min-height: 100px;
+            width: 12vh;
+            height: 12vh;
+            transition: all 0.3s linear;
+
+            &:hover {
+                transform: scale(1.2);
+                transition: all 0.3s linear;
+            }
+            &::after {
+                content: "";
+                @include topMenuAttachment;
+            }
+            &.has_new::after {
+                background: url("../img/pc/new.svg") no-repeat center;
+                background-size: contain;
+            }
+            &.has_count span {
+                @include topMenuAttachment;
+                @include flexBox(row, center, center);
+                color: #fff;
+                font-size: 0.8em;
+                font-weight: bold;
+                background: url("../img/pc/count_bg.svg") no-repeat center;
+                background-size: contain;
+            }
+            cursor: pointer;
+            &[data-top-menu="#{$attr}"] {
+                background: url("../img/pc/#{$bg}") no-repeat center;
+                background-size: contain;
             }
         }
     }
