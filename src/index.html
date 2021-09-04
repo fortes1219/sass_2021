@@ -4,65 +4,93 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1">
   <link rel="stylesheet" href="css/style.css">
-  <title>SASS 2021</title>
+  <title>捕魚大廳範例</title>
 </head>
 
 <body>
-  <div class="row horizontal stretch wrap" data-row-count="5">
-    <div class="row data_row">
-      <p>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-      </p>
+<div class="app">
+  <div class="navigator">
+    <div class="row horizontal v_center">
+      <div class="player">
+        <img src="img/pc/avatar.jpg" class="avatar">
+        <div class="player_exp_block">
+          <span class="player_name">Astolfo</span>
+          <div class="player_exp">
+            <div class="exp_slot">
+              <p>Lv99</p>
+              <span class="exp_bar" data-width="80%"></span>
+            </div>
+          </div>
+        </div>
+        <div class="star_remain">
+          <p>x 168</p>
+        </div>
+      </div>
+      <div class="remain_coins">16000</div>
     </div>
-    <div class="data_row"></div>
-    <div class="data_row"></div>
-    <div class="data_row">
-      <p>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-        test text <br>
-      </p>
+    <ul class="top_menu">
+      <li data-top-menu="payment"></li>
+      <li class="has_count" data-top-menu="reward">
+        <span>99+</span>
+      </li>
+      <li class="has_new" data-top-menu="equipment"></li>
+      <li class="has_count" data-top-menu="items">
+        <span>2</span>
+      </li>
+      <li class="has_new" data-top-menu="mail"></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="aside">
+      <span class="daily_header_img"></span>
+      <ul class="quest_list">
+        <li data-type="fish_1">
+          <span>完成1次連鎖</span>
+          <div class="lock_block">
+            <div class="lock"></div>
+          </div>
+        </li>
+        <li data-type="fish_2">
+          <span>完成2次連鎖</span>
+          <div class="lock_block">
+            <div class="lock"></div>
+          </div>
+        </li>
+        <li data-type="fish_3">
+          <span>不使用接關道具</span>
+          <div class="lock_block">
+            <div class="lock"></div>
+          </div>
+        </li>
+        <li data-type="treasurebox">
+          <span>等級100時開啟</span>
+          <div class="lock_block">
+            <div class="lock"></div>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="data_row"></div>
-    <div class="data_row"></div>
-    <div class="data_row"></div>
-    <div class="data_row"></div>
-    <div class="data_row"></div>
-    <div class="data_row row"></div>
+    <div class="main">
+      <div class="games">
+        <div class="game_01"></div>
+        <div class="game_02"></div>
+        <div class="game_03"></div>
+      </div>
+    </div>
   </div>
-  <div class="row horizontal wrap test">
-    <span class="xs-box"></span>
-    <span class="xs-box"></span>
-    <span class="xs-box"></span>
+  <div class="footer">
+    <ul class="bottom_menu">
+      <li class="community"></li>
+      <li class="quest"></li>
+      <li class="rank"></li>
+      <li class="library"></li>
+      <li class="config"></li>
+      <li class="logout"></li>
+    </ul>
   </div>
-  <div class="row vertical wrap test">
-    <span class="xs-box"></span>
-    <span class="xs-box"></span>
-    <span class="xs-box"></span>
-  </div>
-  <div class="row horizontal wrap test">
-    <span class="xs-box" data-space-all="1rem"></span>
-    <span class="xs-box" data-space-all="1rem"></span>
-    <span class="xs-box" data-space-all="1rem"></span>
-  </div>
-  <div class="row vertical wrap test">
-    <span class="xs-box" data-space-all="1rem"></span>
-    <span class="xs-box" data-space-all="1rem"></span>
-    <span class="xs-box" data-space-all="1rem"></span>
-  </div>
+</div>
 </body>
 
 </html>
